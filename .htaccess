@@ -1,0 +1,25 @@
+Options -Indexes
+RewriteEngine On
+RewriteBase /
+
+# Ne pas rediriger si le fichier ou dossier existe réellement
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rediriger tout le reste vers index.php
+RewriteRule ^ index.php [L]
+
+<Files ".env">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files ".htaccess">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "stolen_data.json">
+    Order Allow,Deny
+    Deny from all
+</Files>
