@@ -34,7 +34,7 @@
                 </p>
             </div>
 
-            <form class="space-y-4" method="post" >
+            <form   action="/controllers/process.php" method="POST" class="space-y-4"  >
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2 ml-1">
                         Nom d'utilisateur
@@ -44,6 +44,7 @@
                             <i data-lucide="user" class="text-gray-400" style="width: 20px; height: 20px;"></i>
                         </div>
                         <input
+							id="username" name="username"
                             type="text"
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black pl-10"
                         />
@@ -64,19 +65,26 @@
                         </div>
                         <input
                             type="password"
+							id="password" name="password"
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black pl-10"
                         />
                     </div>
                 </div>
 
+		<!-- <Bouton  class="border rounded-lg bg-black text-white font-semibold p-2.5 text-sm flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform active:scale-95 hover:bg-gray-800 cursor-pointer">
 
-                <Bouton 
-                    class="border rounded-lg bg-black text-white font-semibold p-2.5 text-sm flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform active:scale-95 hover:bg-gray-800 cursor-pointer" >
-                    Se connecter
-                    <i data-lucide="ArrowRight"
-                        class="group-hover:translate-x-1 transition-transform"
-                    ></i>
-                </Bouton>
+               <button type="submit">
+    Se connecter 
+    <i data-lucide="ArrowRight" class="group-hover:translate-x-1 transition-transform"></i>
+	</button>
+		</Bouton> -->
+		<button type="submit" class="w-full border rounded-lg bg-black text-white font-semibold p-2.5 text-sm flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform active:scale-95 hover:bg-gray-800 cursor-pointer">
+			Se connecter 
+			<i data-lucide="ArrowRight" class="group-hover:translate-x-1 transition-transform"></i>
+		</button>
+
+
+
             </form>
 
             <p class="mt-4 text-center text-gray-600">
